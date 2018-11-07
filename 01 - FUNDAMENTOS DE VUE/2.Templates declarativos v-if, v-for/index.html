@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>1.0 Creación de componentes</title>
+</head>
+<body>
+<div id="app">
+    <button v-on:click="toggleVisible">Toggle visible!</button>
+   <my-component v-if="visible"
+   title="Ahora me puedes ver!">
+   </my-component>
+    <my-component v-for="(component, index) in components"
+                  :key="index"
+                  :title="component.title"
+                  ></my-component>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
